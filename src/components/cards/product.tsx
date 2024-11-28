@@ -1,23 +1,28 @@
+import Image from "next/image";
 
 export default function Product() {
     return (
 
-
-        <div
-            className="block rounded-lg  bg-slate-500 p-6 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white">
-            <h5 className="mb-2 text-xl font-medium leading-tight">Card title</h5>
-            <p className="mb-4 text-base">
-                Some quick example text to build on the card title and make up the
-                bulk of the cards content.
-            </p>
-            <button
-                type="button"
-                className="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
-                data-twe-ripple-init
-                data-twe-ripple-color="light">
-                Button
-            </button>
+    <div className="flex bg-white rounded-lg shadow dark:bg-gray-800 flex-col md:flex-row  ">
+        <div className="relative w-full md:w-48 flex justify-center items-center">
+            <img src="https://cdn.pixabay.com/photo/2013/07/13/14/07/apparel-162180_960_720.png" alt="shopping image"
+                className="object-cover w-full h-48 md:h-full rounded-t-lg md:rounded-l-lg md:rounded-t-none" />
         </div>
+        <form className="flex-auto p-6">
+            <div className="flex flex-wrap">
+                <h1 className="flex-auto text-xl font-semibold dark:text-gray-50">Product name</h1>
+                <div className="text-xl font-semibold text-gray-500 dark:text-gray-300">$110.00</div>
+                <div className="flex-none w-full mt-2 text-sm font-medium text-gray-500 dark:text-gray-300">In stock</div>
+            </div>
+            
+            <div className="flex mb-4 text-sm font-medium">
+                <button type="button"
+                    className="py-2 px-4 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg ">Buy
+                    now</button>
+            </div>
+            <p className="text-sm text-gray-500 dark:text-gray-300">Free shipping on all continental US orders.</p>
+        </form>
+    </div>
 
     );
 }
