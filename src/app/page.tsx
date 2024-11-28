@@ -1,5 +1,4 @@
 import Product from "@/components/cards/product";
-import Link from "next/link";
 
 export default function Home() {
   const products = [1,2,3,4,5,]
